@@ -1,0 +1,38 @@
+substitutions:
+  device_name: "00-new-one"
+  friendly_name: "00-new-one"
+  project_name: "00-new-one"
+  project_version: "1.0"
+  relay_restore_mode: RESTORE_DEFAULT_OFF
+
+esphome:
+  name: "${device_name}"
+  name_add_mac_suffix: true
+
+esp8266:
+  board: d1_mini
+
+logger:
+api:
+ota:
+
+mdns:
+  disabled: false
+
+web_server:
+  port: 80
+
+wifi:
+  ap: {} # This spawns an AP with the device name and mac address with no password.
+
+captive_portal:
+
+dashboard_import:
+  package_import_url: github://athom-tech/athom-configs/athom-smart-plug-v2.yaml
+
+switch:
+  - platform: gpio
+    name: "${friendly_name} switch"
+    pin: GPIO12
+    id: relay
+    restore_mode: ${relay_restore_mode}
