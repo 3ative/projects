@@ -1,7 +1,7 @@
 substitutions:
   device_name: "00-new-one"
   friendly_name: "00-new-one"
-  project_name: "00-new-one"
+  project_name: "3ative.00-new-one"
   project_version: "1.0"
   relay_restore_mode: RESTORE_DEFAULT_OFF
 
@@ -31,7 +31,7 @@ wifi:
 captive_portal:
 
 dashboard_import:
-  package_import_url: github://3ative/projects/3ative/projects/00-new-one.yaml
+  package_import_url: github://3ative/projects/00-new-one.yaml
 
 switch:
   - platform: gpio
@@ -41,10 +41,10 @@ switch:
     restore_mode: ${relay_restore_mode}
  
 light:
- - platform: status_led
-   name: "${friendly_name} Status LED"
-   id: blue_led
-   disabled_by_default: true
-   pin:
-     inverted: true
-     number: GPIO2
+  - platform: status_led
+    name: "${friendly_name} Status LED"
+    id: blue_led
+    disabled_by_default: true
+    pin:
+      inverted: true
+      number: GPIO2
