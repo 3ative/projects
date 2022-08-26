@@ -1,10 +1,11 @@
 substitutions:
+  device_name: "project-name"
   friendly_name: "Device Entity"
   project_name: "3ative.project-name"
   project_version: "1.0"
   
 esphome:
-  name: "project-name"
+  name: "${device_name}"
   name_add_mac_suffix: true
   project:
     name: "${project_name}"
@@ -38,14 +39,10 @@ switch:
     id: relay
  
 light:
-  - platform: binary
+  - platform: status_led
     name: "${friendly_name} Blue LED"
     id: blue_led
-    output: light_output
-
-output:
-  - id: light_output
-    platform: gpio
+    disabled_by_default: true
     pin:
       inverted: true
       number: GPIO3
