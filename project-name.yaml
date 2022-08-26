@@ -40,4 +40,4 @@ light:
     disabled_by_default: true
     pin:
       inverted: true
-      number: GPIO2
+      number: GPIO3
