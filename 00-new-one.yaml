@@ -28,7 +28,7 @@ wifi:
 captive_portal:
 
 dashboard_import:
-  package_import_url: github://athom-tech/athom-configs/athom-smart-plug-v2.yaml
+  package_import_url: github://3ative/projects/3ative/projects
 
 switch:
   - platform: gpio
