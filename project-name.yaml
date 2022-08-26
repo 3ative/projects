@@ -39,10 +39,12 @@ switch:
     restore_mode: ${relay_restore_mode}
  
 light:
-  - platform: status_led
+  - platform: binary
     name: "${friendly_name} Status LED"
     id: blue_led
-    disabled_by_default: true
-    pin:
-      inverted: true
-      number: GPIO3
+    output: light_output
+
+output:
+  - id: light_output
+    platform: gpio
+    pin: GPIO3
