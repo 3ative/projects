@@ -40,7 +40,7 @@ switch:
  
 light:
   - platform: binary
-    name: "${friendly_name} Status LED"
+    name: "${friendly_name} Blue LED"
     id: blue_led
     output: light_output
 
