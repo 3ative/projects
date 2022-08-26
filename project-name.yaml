@@ -36,7 +36,6 @@ switch:
     name: "${friendly_name} switch"
     pin: GPIO12
     id: relay
-    restore_mode: ${relay_restore_mode}
  
 light:
   - platform: binary
