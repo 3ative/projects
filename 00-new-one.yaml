@@ -39,3 +39,12 @@ switch:
     pin: GPIO12
     id: relay
     restore_mode: ${relay_restore_mode}
+ 
+ light:
+  - platform: status_led
+    name: "${friendly_name} Status LED"
+    id: blue_led
+    disabled_by_default: true
+    pin:
+      inverted: true
+      number: GPIO2
