@@ -31,7 +31,7 @@ wifi:
 captive_portal:
 
 dashboard_import:
-  package_import_url: github://3ative/projects/3ative/projects
+  package_import_url: github://3ative/projects/3ative/projects/00-new-one.yaml
 
 switch:
   - platform: gpio
