@@ -48,3 +48,4 @@ switch:
     pin:
       inverted: true
       number: GPIO2
+ 
